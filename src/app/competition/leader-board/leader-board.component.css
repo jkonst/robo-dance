@@ -1,0 +1,16 @@
+@import "../../app.component.css";
+.container {
+  flex-direction: column;
+}
+
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.mat-elevation-z8 {
+  margin-bottom: 2vh;
+}

@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>{{data.title}}</h1>
+
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Select your opponent</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option [value]="opponent.id" *ngFor="let opponent of data.opponents">
+        {{opponent.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary"
+          [disabled]="!selected" [mat-dialog-close]="selected">
+    Select
+  </button>
+</div>
+

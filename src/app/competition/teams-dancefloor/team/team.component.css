@@ -1,0 +1,36 @@
+.team-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-title {
+  text-align: center;
+}
+
+.robot-container {
+  max-width: 33vw;
+  margin-bottom: 1vh;
+}
+
+.robots-container {
+  height: 100%;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-card-title-group {
+  border-bottom: 1px solid cadetblue;
+}
+
+.mat-card-title {
+  font-size: 2vh;
+}
+
+.active {
+  background-color: chartreuse;
+}
+
+.inactive {
+  opacity: 0.5;
+}

@@ -1,0 +1,8 @@
+{
+  "/parkside": {
+    "target": "https://challenge.parkside-interactive.com",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {"^/parkside":  ""}
+  }
+}

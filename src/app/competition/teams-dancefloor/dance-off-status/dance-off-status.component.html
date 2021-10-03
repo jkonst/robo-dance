@@ -1,0 +1,4 @@
+<span *ngIf="!!status" class="status-notification"
+      [class.winner]="status === 'W'" [class.loser]="status === 'L'">
+  {{status}}
+</span>

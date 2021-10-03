@@ -1,0 +1,28 @@
+.intro {
+  max-width: 400px;
+  margin: 0 auto;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.intro-text {
+  text-align: center;
+}
+
+.start-btn {
+  font-size: medium;
+  background-color: cornflowerblue;
+  color: bisque;
+}
+
+.start-btn:hover {
+  background-color: indianred;
+  color: cornflowerblue;
+}
+
+.bg-color:hover {
+  background-color: coral;
+}

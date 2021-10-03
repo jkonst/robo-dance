@@ -1,0 +1,13 @@
+.center {
+  justify-content: center;
+}
+
+.author a {
+  cursor: pointer;
+  text-decoration: none;
+  color: pink;
+}
+
+.author a:hover {
+  color: cornflowerblue;
+}

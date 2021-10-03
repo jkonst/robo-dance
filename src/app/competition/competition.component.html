@@ -1,0 +1,7 @@
+<router-outlet></router-outlet>
+<ng-container *ngIf="!(isBoardActive$ | async)">
+  <app-teams-creator [teamsNo]="2" [robots]="robots$ | async" [teams]="teams$ | async">
+  </app-teams-creator>
+  <app-messages></app-messages>
+  <app-teams-dancefloor></app-teams-dancefloor>
+</ng-container>

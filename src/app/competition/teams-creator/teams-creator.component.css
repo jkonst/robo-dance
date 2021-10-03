@@ -1,0 +1,29 @@
+@import "../../app.component.css";
+
+.add-teams-container {
+  flex-direction: row;
+}
+
+.fill-teams-container {
+  flex-direction: column;
+}
+
+button.mat-raised-button {
+  font-size: 1rem;
+  margin: 1vw;
+}
+
+@media screen and (min-height: 650px) {
+  .container {
+    height: 15%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  button.mat-raised-button {
+    font-size: 0.7rem;
+    padding: 0;
+    margin: 2.2vw;
+  }
+}
+

@@ -1,0 +1,12 @@
+.status-notification {
+  font-size: x-large;
+  font-weight: 900;
+}
+
+.winner {
+  color: green
+}
+
+.loser {
+  color: red
+}

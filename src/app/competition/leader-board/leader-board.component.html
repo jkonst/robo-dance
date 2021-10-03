@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort  matSortActive="winsNo"
+           matSortDirection="desc" class="mat-elevation-z8">
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef > Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+      <!-- Wins Column -->
+      <ng-container matColumnDef="winsNo">
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header> Wins No </th>
+        <td mat-cell *matCellDef="let element"> {{element.winsNo}} </td>
+      </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator
+                  [length]="totalResults"
+                  [pageSizeOptions]="[10, 20]"
+                   showFirstLastButtons
+                   aria-label="Select page of robots">
+    </mat-paginator>
+  </div>
+  <button mat-raised-button color="primary"
+          (click)="backToCompetition()">Back to Competition
+  </button>
+</div>
+

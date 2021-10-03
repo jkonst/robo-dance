@@ -1,0 +1,23 @@
+<div class="team-container" *ngIf="!!team">
+  <mat-card class="robots-container">
+    <mat-card-title-group>
+      <mat-card-title>Team: {{team.name}}</mat-card-title>
+    </mat-card-title-group>
+    <mat-card-content>
+      <ng-container *ngFor="let robot of team.robots">
+        <mat-card class="robot-container"  [class.active]="robot.id | isRobotActive: activePair"
+                  [class.inactive]="robot.id | isRobotInDanceoff: danceOffs">
+          <app-robot [robot]="robot"
+                     [activePair]="activePair"
+                     [danceOffs]="danceOffs"
+                     (pickOpponentEvent)="pickOpponent($event)">
+          </app-robot>
+          <ng-container *ngIf="robot.id | isRobotInDanceoff: danceOffs">
+            <app-dance-off-status [status]="robot.id | findStatus: danceOffs">
+            </app-dance-off-status>
+          </ng-container>
+        </mat-card>
+      </ng-container>
+    </mat-card-content>
+  </mat-card>
+</div>

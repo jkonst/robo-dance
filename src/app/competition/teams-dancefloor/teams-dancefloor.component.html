@@ -1,0 +1,28 @@
+<div class="dancefloor-area" *ngIf="teams$ | async as teams">
+  <div class="start-dance-btn-wrapper" *ngIf="(teams | filterFilledTeams)
+   && status$ | async as status">
+    <button mat-raised-button color="primary" *ngIf="status | pendingDanceOff"
+            class="dance-off"
+            [disabled]="(activePair$ | async).length !== 2"
+            [class.spinner]="status | pendingPostingDanceoffs"
+            (click)="danceOff()">
+      Dance-off
+    </button>
+    <button mat-raised-button color="primary" *ngIf="status | toCompeteAgain"
+            class="another-round"
+            (click)="competeAgain()">
+      Another round!
+    </button>
+  </div>
+  <div class="teams-container">
+    <ng-container *ngFor="let team of teams">
+      <div class="team-container" *ngIf="opponents$ | async as opponents">
+        <app-team [team]="team"
+                  [activePair]="activePair$ | async"
+                  [danceOffs]="danceOffs$ | async"
+                  (pickOpponentEvent)="pickOpponent($event, opponents)">
+        </app-team>
+      </div>
+    </ng-container>
+  </div>
+</div>

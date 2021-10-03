@@ -1,0 +1,6 @@
+<div class="container fill-teams-container" *ngIf="!(isFilled$ | async)">
+  <mat-card>Well done - 2 teams created!</mat-card>
+  <button mat-stroked-button color="primary" [class.spinner]="filling"
+          [disabled]="filling" (click)="fillTeams()">Fill Teams!
+  </button>
+</div>

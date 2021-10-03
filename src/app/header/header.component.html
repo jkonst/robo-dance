@@ -1,0 +1,24 @@
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <div fxFlex fxLayout fxLayoutAlign="flex-start"  fxHide.xs>
+        <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+          <li>
+            <a  routerLink="/">
+              <mat-icon class="icon">home</mat-icon>
+              <span class="label">Home</span>
+            </a>
+          </li>
+          <li [class.disable]="!isLeaderboardActive">
+            <a routerLink="/competition/board">
+              <mat-icon class="icon">list</mat-icon>
+              <span class="label">Leaderboard</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </mat-toolbar>
+    <main>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

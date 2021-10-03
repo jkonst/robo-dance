@@ -1,0 +1,21 @@
+<div *ngIf="teams.length < teamsNo; else created" class="container add-teams-container">
+  <form [formGroup]="form">
+    <mat-form-field appearance="fill" hintLabel="Max 15 characters">
+      <mat-label>{{ teams.length === 0 ? 'Name the 1st team' : 'Name the 2nd team'}}</mat-label>
+      <input matInput formControlName="name" maxlength="15" required>
+      <mat-error *ngIf="form.invalid && !!form.get('name').errors.required">
+        {{'Please name the team'}}</mat-error>
+      <mat-error
+        *ngIf="form.invalid && !!form.get('name').errors.duplicateName">
+        {{'This team name exists already'}}
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="form.invalid"
+            (click)="addTeam()">Add Team!
+    </button>
+  </form>
+</div>
+<ng-template #created>
+  <app-teams-composer [robots]="robots" [noOfRobots]="5">
+  </app-teams-composer>
+</ng-template>

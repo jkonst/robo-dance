@@ -1,0 +1,21 @@
+<ng-container *ngIf="!!robot">
+  <mat-card-title-group>
+    <div class="header">
+      <div class="info">
+        <mat-card-title>{{robot.name}}</mat-card-title>
+        <mat-card-subtitle>{{'Exp.: ' + robot.experience}}</mat-card-subtitle>
+      </div>
+      <div class="avatar">
+        <img mat-card-sm-image [src]="robot.avatar" alt="avatar"/>
+      </div>
+    </div>
+  </mat-card-title-group>
+  <mat-card-content class="content">
+    <button mat-raised-button color="warn" class="pick-opponent-btn" *ngIf="!(activePair | activePairExists) &&
+     !(robot.id | isRobotInDanceoff: danceOffs)"
+            (click)="pickOpponentEvent.emit(robot.id)">
+      Pick
+    </button>
+    <span>{{'My power move is ' + robot.powermove}}</span>
+  </mat-card-content>
+</ng-container>

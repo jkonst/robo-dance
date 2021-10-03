@@ -1,0 +1,26 @@
+@import "../competition.component.css";
+
+.dancefloor-area {
+  max-width: 94vw;
+  margin: 1.2vh 1vw 0;
+  justify-content: center;
+  height: 90%;
+  align-items: center;
+  padding: 2vw 2vw 0;
+}
+
+.teams-container {
+  flex-direction: row;
+  display: flex;
+}
+
+.start-dance-btn-wrapper {
+  margin-bottom: 2vh;
+  text-align: center;
+}
+
+.team-container {
+  height: 80%;
+  width: 41vw;
+  margin: 0 3vw;
+}
